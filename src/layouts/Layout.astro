@@ -1,3 +1,8 @@
+---
+
+import Footer from "../components/Footer.astro"
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
@@ -8,7 +13,8 @@
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro Basics</title>
 	</head>
-	<body>
+	<body class="relative bg-[#121212]">
 		<slot />
+		<Footer/>
 	</body>
 </html>
