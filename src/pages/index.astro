@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import ExperienceCard from "../components/ExperienceCard.astro";
 import "../styles/global.css";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
@@ -30,7 +31,43 @@ const social = [
 	}
 
 ]
-	 
+
+const experiences = [
+	{
+		title:"Customer Tech Support Rep", 
+        date:"2025-2026", 
+        enterprise:"Telus Digital",
+        location:"Quetzaltenango, Guatemala", 
+        url:"", 
+        summary:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed voluptatibus laboriosam molestiae assumenda, optio distinctio voluptates vero possimus voluptate, minima facere quo? Reiciendis dignissimos vero maiores molestias possimus id cum.", 
+        responsabilities:["Responsability 1", "Responsability 1", "Responsability 1"], 
+        achievements:["Achievement 1", "Achievement 2", "Achievement 3"],
+        skills:["English", "Multi-task", "Tickets management", "Under-Pressure work"]
+	},
+	{
+		title:"Customer Tech Support Rep", 
+        date:"2025-2026", 
+        enterprise:"Telus Digital",
+        location:"Quetzaltenango, Guatemala", 
+        url:"", 
+        summary:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed voluptatibus laboriosam molestiae assumenda, optio distinctio voluptates vero possimus voluptate, minima facere quo? Reiciendis dignissimos vero maiores molestias possimus id cum.", 
+        responsabilities:["Responsability 1", "Responsability 1", "Responsability 1"], 
+        achievements:["Achievement 1", "Achievement 2", "Achievement 3"],
+        skills:["py, cpp, cs, css, java, js, ts, rct"]
+	},
+	{
+		title:"Customer Tech Support Rep", 
+        date:"2025-2026", 
+        enterprise:"Telus Digital",
+        location:"Quetzaltenango, Guatemala", 
+        url:"", 
+        summary:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed voluptatibus laboriosam molestiae assumenda, optio distinctio voluptates vero possimus voluptate, minima facere quo? Reiciendis dignissimos vero maiores molestias possimus id cum.", 
+        responsabilities:["Responsability 1", "Responsability 1", "Responsability 1"], 
+        achievements:["Achievement 1", "Achievement 2", "Achievement 3"],
+        skills:["py, cpp, cs, css, java, js, ts, rct"]
+	}
+]
+
 ---
 
 <Layout>
@@ -90,8 +127,31 @@ const social = [
 				
 			</aside>
 
-			<article class ="col-span-4 bg-green-500">
-				Experiencia
+			<article class ="col-span-4 w-[95%]">
+				<div>
+					<!--Experiences block-->
+					<div class ="flex flex-col gap-10">
+						<h2 class ="text-white text-3xl">Experiences</h2>
+						<div class ="flex flex-col gap-5">
+							{experiences.map(
+								(ex)=>{
+									return(
+										<ExperienceCard date={ex.date}
+											title={ex.title}
+											location={ex.location}
+											enterprise={ex.enterprise}
+											summary={ex.summary}
+											responsabilities={ex.responsabilities}
+											achievements={ex.achievements}
+											skills={ex.skills}/>
+									)
+								}
+							)}
+						</div>
+						
+					</div>
+				</div>
+				
 			</article>
 		</main>
 

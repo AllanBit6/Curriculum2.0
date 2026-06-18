@@ -1,0 +1,59 @@
+---
+const { title, 
+        date, 
+        enterprise,
+        location, 
+        url, 
+        summary, 
+        responsabilities, 
+        achievements,
+        skills} = Astro.props;
+---
+
+<div class ="grid grid-cols-7 w-full">
+    <!--Date-->
+    <div class ="col-span-1">
+        <p class ="text-white font-bold text-[14px]">{date}</p>
+    </div>
+    <div class ="col-span-6 bg-gray max-h-125 overflow-scroll no-scrollbar">
+        <div class ="flex flex-col gap-5">
+            <!--Experience header -->
+            <div>
+                <h3 class="text-white text-[20px]">{title} @ <a href={url} class ="text-(--primary-color) hover:text-white/80">{enterprise}</a></h3>
+                <h4 class ="text-(--prg-color) text-[14px]">{location}</h4>
+            </div>
+
+            <!--Summary -->
+            <div>
+                <h5 class="text-white text-[14px]">Summary:</h5>
+                <p class="text-(--prg-color) text-[14px] ml-5">{summary}</p>
+            </div>
+
+            <div>
+                <h5 class ="text-white text-[14px]">Responsabilities:</h5>
+
+                <!--With an array -->
+                {
+                    responsabilities.map((r:any) =>{return(<p class="text-(--prg-color) text-[14px] ml-5">{r}</p>)})
+                }
+            </div>
+
+            <div>
+                <h5 class="text-white text-[14px]">Achievements:</h5>
+                <!--With an array -->
+                {
+                    achievements.map((a:any) =>{return(<p class="text-(--prg-color) text-[14px] ml-5">{a}</p>)})
+                }
+            </div>
+
+            <div class ="flex flex-row gap-3 flex-wrap">
+                <!--With an array -->
+                {
+                    skills.map((s:any) =>{return(<p class ="px-3 py-1 rounded-[10px] border border-(--primary-color) bg-(--primary-color)/20 text-(--primary-color) text-[12px] ml-5">{s}</p>)})
+                }
+            </div>
+            
+        </div>
+
+    </div>
+</div>
