@@ -1,1 +1,8 @@
 @import "tailwindcss";
+
+@theme {
+    --primary-color: #e34d0a;
+    --prg-color: #969696;
+
+    --title: Arial, Helvetica, sans-serif
+}
