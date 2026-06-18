@@ -12,11 +12,11 @@ const { title,
 
 <div class ="grid grid-cols-7 w-full">
     <!--Date-->
-    <div class ="col-span-1">
+    <div class ="col-span-1 border-r border-(--prg-color)">
         <p class ="text-white font-bold text-[14px]">{date}</p>
     </div>
     <div class ="col-span-6 bg-gray max-h-125 overflow-scroll no-scrollbar">
-        <div class ="flex flex-col gap-5">
+        <div class ="ml-5 flex flex-col gap-5">
             <!--Experience header -->
             <div>
                 <h3 class="text-white text-[20px]">{title} @ <a href={url} class ="text-(--primary-color) hover:text-white/80">{enterprise}</a></h3>
@@ -49,7 +49,7 @@ const { title,
             <div class ="flex flex-row gap-3 flex-wrap">
                 <!--With an array -->
                 {
-                    skills.map((s:any) =>{return(<p class ="px-3 py-1 rounded-[10px] border border-(--primary-color) bg-(--primary-color)/20 text-(--primary-color) text-[12px] ml-5">{s}</p>)})
+                    skills.map((s:any) =>{return(<p class ="px-3 py-1 rounded-[10px] border border-(--primary-color) bg-(--primary-color)/20 text-(--primary-color) text-[12px]">{s}</p>)})
                 }
             </div>
             

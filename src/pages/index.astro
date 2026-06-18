@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import ExperienceCard from "../components/ExperienceCard.astro";
+import ProjectCard from "../components/ProjectCard.astro";
 import "../styles/global.css";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
@@ -38,7 +39,7 @@ const experiences = [
         date:"2025-2026", 
         enterprise:"Telus Digital",
         location:"Quetzaltenango, Guatemala", 
-        url:"", 
+        url:"#", 
         summary:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed voluptatibus laboriosam molestiae assumenda, optio distinctio voluptates vero possimus voluptate, minima facere quo? Reiciendis dignissimos vero maiores molestias possimus id cum.", 
         responsabilities:["Responsability 1", "Responsability 1", "Responsability 1"], 
         achievements:["Achievement 1", "Achievement 2", "Achievement 3"],
@@ -49,7 +50,7 @@ const experiences = [
         date:"2025-2026", 
         enterprise:"Telus Digital",
         location:"Quetzaltenango, Guatemala", 
-        url:"", 
+        url:"#", 
         summary:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed voluptatibus laboriosam molestiae assumenda, optio distinctio voluptates vero possimus voluptate, minima facere quo? Reiciendis dignissimos vero maiores molestias possimus id cum.", 
         responsabilities:["Responsability 1", "Responsability 1", "Responsability 1"], 
         achievements:["Achievement 1", "Achievement 2", "Achievement 3"],
@@ -60,7 +61,7 @@ const experiences = [
         date:"2025-2026", 
         enterprise:"Telus Digital",
         location:"Quetzaltenango, Guatemala", 
-        url:"", 
+        url:"#", 
         summary:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed voluptatibus laboriosam molestiae assumenda, optio distinctio voluptates vero possimus voluptate, minima facere quo? Reiciendis dignissimos vero maiores molestias possimus id cum.", 
         responsabilities:["Responsability 1", "Responsability 1", "Responsability 1"], 
         achievements:["Achievement 1", "Achievement 2", "Achievement 3"],
@@ -128,7 +129,7 @@ const experiences = [
 			</aside>
 
 			<article class ="col-span-4 w-[95%]">
-				<div>
+				<div class="flex flex-col gap-20">
 					<!--Experiences block-->
 					<div class ="flex flex-col gap-10">
 						<h2 class ="text-white text-3xl">Experiences</h2>
@@ -143,15 +144,28 @@ const experiences = [
 											summary={ex.summary}
 											responsabilities={ex.responsabilities}
 											achievements={ex.achievements}
-											skills={ex.skills}/>
+											skills={ex.skills}
+											url={ex.url}/>
 									)
 								}
 							)}
-						</div>
-						
+						</div>	
+					</div>
+
+					<!--Projects block-->
+					<div class ="flex flex-col gap-10">
+						<h2 class ="text-white text-3xl">Projects</h2>
+						<div class ="grid grid-cols-2 gap-3">
+							<ProjectCard title="Project 1"
+										 description="as;dkfja;sldfkjsldkfjsldkf"
+										 tech={[1,2,3,4,5]}/>
+							<ProjectCard title="Project 1"
+										 description="as;dkfja;sldfkjsldkfjsldkf"
+										 tech={[1,2,3,4,5]}/>
+							
+	
 					</div>
 				</div>
-				
 			</article>
 		</main>
 
