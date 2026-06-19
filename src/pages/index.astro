@@ -12,22 +12,22 @@ import "../styles/global.css";
 const social = [
 	{
 		name: "LinkedIn",
-		svg: "assets/linkedin.svg",
+		svg: "fa-brands fa-linkedin",
 		url:""
 	},
 	{
 		name: "GitHub",
-		svg: "assets/github.svg",
+		svg: "fa-brands fa-github",
 		url:""
 	},
 	{
 		name: "Gmail",
-		svg: "assets/mail.svg",
+		svg: "fa-solid fa-inbox",
 		url:""
 	},
 	{
 		name: "WhatsApp",
-		svg: "src/assets/whatsapp.svg",
+		svg: "fa-brands fa-whatsapp" ,
 		url:""
 	}
 
@@ -87,8 +87,8 @@ const experiences = [
 						<h1 class ="font-sans font-bold text-3xl text-white">Allan Vasquez</h1>
 						<h2 class ="text-(--prg-color)">Junior Full Stack Developer</h2>
 					</div>
-					<div>
-						<span></span>
+					<div class="flex flex-row items-center gap-2">
+						<i class="fa-solid fa-globe-americas text-(--prg-color)"></i>
 						<p class ="text-(--prg-color) text-[14px]">Totonicapan, Guatemala</p>
 					</div>
 					<div class ="">
@@ -99,9 +99,7 @@ const experiences = [
 										return(
 										<li class ="p-1 rounded-[10px] hover:bg-white/10">
 											<a href={s.url}>
-												<svg class="" height="30" width="30">
-													<image class="" height="30" width="30" href={s.svg} />
-												</svg>		
+												<i class={s.svg + " text-(--primary-color) text-2xl"}></i>	
 											</a>
 										</li>
 									)
