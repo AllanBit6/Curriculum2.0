@@ -34,38 +34,38 @@ const social = [
 ]
 
 const experiences = [
+		{
+		title:"Freelance Fullstack developer", 
+        date:"2026-Now", 
+        enterprise:"Code-QX",
+        location:"Home Office", 
+        url:"#", 
+        summary:"Creation of an own software development studio, speciality developing administration software for start-ups and growing enterprises.", 
+        responsabilities:["Meetings and requirements setup for client and his needs", "Leader and product owner (SCRUM) for the dev-team", "New releases/features meeting and demonstrations with client"], 
+        achievements:["Achievement 1", "Achievement 2", "Achievement 3"],
+        skills:["React JS", "Tailwind CSS", "Python Django", "Vite", "Github", "Trello", "Communication", "Planning", "Persuasion"]
+	},
 	{
 		title:"Customer Tech Support Rep", 
         date:"2025-2026", 
-        enterprise:"Telus Digital",
+        enterprise:"Telus Digital Xela",
         location:"Quetzaltenango, Guatemala", 
         url:"#", 
-        summary:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed voluptatibus laboriosam molestiae assumenda, optio distinctio voluptates vero possimus voluptate, minima facere quo? Reiciendis dignissimos vero maiores molestias possimus id cum.", 
-        responsabilities:["Responsability 1", "Responsability 1", "Responsability 1"], 
-        achievements:["Achievement 1", "Achievement 2", "Achievement 3"],
+        summary:"In charge of giving remote support to users of a package company website via cellphone.", 
+        responsabilities:["New accounts setup guidance", "Documentation and pending-tickets solving", "Workaround providing for many situations related to the website."], 
+        achievements:["Selected to be part of that new LBO wave (wave 3) in Guatemala"],
         skills:["English", "Multi-task", "Tickets management", "Under-Pressure work"]
 	},
 	{
-		title:"Customer Tech Support Rep", 
-        date:"2025-2026", 
-        enterprise:"Telus Digital",
-        location:"Quetzaltenango, Guatemala", 
+		title:"IT and Programming Teacher", 
+        date:"2023-2025", 
+        enterprise:"Instituto Tecnologico Teczion",
+        location:"Totonicapan, Guatemala", 
         url:"#", 
         summary:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed voluptatibus laboriosam molestiae assumenda, optio distinctio voluptates vero possimus voluptate, minima facere quo? Reiciendis dignissimos vero maiores molestias possimus id cum.", 
         responsabilities:["Responsability 1", "Responsability 1", "Responsability 1"], 
         achievements:["Achievement 1", "Achievement 2", "Achievement 3"],
-        skills:["py, cpp, cs, css, java, js, ts, rct"]
-	},
-	{
-		title:"Customer Tech Support Rep", 
-        date:"2025-2026", 
-        enterprise:"Telus Digital",
-        location:"Quetzaltenango, Guatemala", 
-        url:"#", 
-        summary:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed voluptatibus laboriosam molestiae assumenda, optio distinctio voluptates vero possimus voluptate, minima facere quo? Reiciendis dignissimos vero maiores molestias possimus id cum.", 
-        responsabilities:["Responsability 1", "Responsability 1", "Responsability 1"], 
-        achievements:["Achievement 1", "Achievement 2", "Achievement 3"],
-        skills:["py, cpp, cs, css, java, js, ts, rct"]
+        skills:["React", "Tailwind", "Vite", "Github", "Trello", "Communication", "Planning", "Persuasion"]
 	}
 ]
 
@@ -137,15 +137,18 @@ const experiences = [
 							{experiences.map(
 								(ex)=>{
 									return(
-										<ExperienceCard date={ex.date}
-											title={ex.title}
-											location={ex.location}
-											enterprise={ex.enterprise}
-											summary={ex.summary}
-											responsabilities={ex.responsabilities}
-											achievements={ex.achievements}
-											skills={ex.skills}
-											url={ex.url}/>
+										<div>
+											<hr class ="w-[25%] m-3 border-1/2 border-(--prg-color)"/>
+											<ExperienceCard date={ex.date}
+												title={ex.title}
+												location={ex.location}
+												enterprise={ex.enterprise}
+												summary={ex.summary}
+												responsabilities={ex.responsabilities}
+												achievements={ex.achievements}
+												skills={ex.skills}
+												url={ex.url}/>
+										</div>
 									)
 								}
 							)}
@@ -157,16 +160,17 @@ const experiences = [
 						<h2 class ="text-white text-3xl">Projects</h2>
 						<div class ="grid grid-cols-2 gap-3">
 							<ProjectCard title="Project 1"
-										 description="as;dkfja;sldfkjsldkfjsldkf"
+										 description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus quae maxime quis ducimus, mollitia non vitae sapiente consequatur illo! Ipsam eveniet iusto delectus numquam illo suscipit tempore nostrum quibusdam voluptates!"
 										 tech={[1,2,3,4,5]}/>
 							<ProjectCard title="Project 1"
-										 description="as;dkfja;sldfkjsldkfjsldkf"
+										 description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus quae maxime quis ducimus, mollitia non vitae sapiente consequatur illo! Ipsam eveniet iusto delectus numquam illo suscipit tempore nostrum quibusdam voluptates!"
 										 tech={[1,2,3,4,5]}/>
 							
 	
 					</div>
 				</div>
 			</article>
+			
 		</main>
 
 	</div>
