@@ -7,6 +7,23 @@ import "../styles/global.css";
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 
+const langs = {
+	py:"fa-brands fa-python",
+	react:"fa-brands fa-react",
+	tailwind:"fa-brands fa-tailwind-css",
+	java:"fa-brands fa-java",
+	js:"fa-brands fa-js",
+	db:"fa-solid fa-database",
+	github:"fa-brands fa-git-alt",
+	google:"fa-brands fa-google",
+	html:"fa-brands fa-html5",
+	ts: "fa-brands fa-typescript",
+	cpp: "fa-solid fa-c",
+	postgres:"fa-brands fa-postgresql",
+	mobile:"fa-solid fa-mobile",
+
+
+}
 
 //Edit svg colors on file src/assets/
 const social = [
@@ -68,6 +85,54 @@ const experiences = [
         skills:["React", "Tailwind", "Vite", "Github", "Trello", "Communication", "Planning", "Persuasion"]
 	}
 ]
+
+const projects = [
+	{
+		title:"Clinix - Medic Tracker",
+		description:"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus quae maxime quis ducimus, mollitia non vitae sapiente consequatur illo! Ipsam eveniet iusto delectus numquam illo suscipit tempore nostrum quibusdam voluptates!",
+		tech:["Developed doctor desktop client.","Made with ShadCN for UI, React TS.","Uses Google Auth.", "Contributed on Django backend,"],
+		url:"#",
+		repo:"#",
+		langs:[langs.react, langs.tailwind, langs.google, langs.github, langs.py]
+	},
+	{
+		title:"Sales Net - Custom POS",
+		description:"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus quae maxime quis ducimus, mollitia non vitae sapiente consequatur illo! Ipsam eveniet iusto delectus numquam illo suscipit tempore nostrum quibusdam voluptates!",
+		tech:[1,2,3],
+		url:"#",
+		repo:"#",
+		langs:[langs.react, langs.tailwind, langs.mobile,langs.github]
+	},
+	{
+		title:"Curriculum - Astro Web",
+		description:"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus quae maxime quis ducimus, mollitia non vitae sapiente consequatur illo! Ipsam eveniet iusto delectus numquam illo suscipit tempore nostrum quibusdam voluptates!",
+		tech:[1,2,3],
+		url:"#",
+		repo:"#",
+		langs:[langs.html, langs.tailwind, langs.google, langs.github]
+	},
+	{
+		title:"Foundation Website - Astro Web",
+		description:"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus quae maxime quis ducimus, mollitia non vitae sapiente consequatur illo! Ipsam eveniet iusto delectus numquam illo suscipit tempore nostrum quibusdam voluptates!",
+		tech:[1,2,3],
+		url:"#",
+		repo:"#",
+		langs:[langs.react, langs.tailwind, langs.google, langs.github]
+	},
+
+	{
+		title:"Dates Administration - Escolar",
+		description:"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus quae maxime quis ducimus, mollitia non vitae sapiente consequatur illo! Ipsam eveniet iusto delectus numquam illo suscipit tempore nostrum quibusdam voluptates!",
+		tech:[1,2,3],
+		url:"#",
+		repo:"#",
+		langs:[langs.cpp]
+	}
+]
+
+
+
+	
 
 ---
 
@@ -157,12 +222,18 @@ const experiences = [
 					<div class ="flex flex-col gap-10">
 						<h2 class ="text-white text-3xl">Projects</h2>
 						<div class ="grid grid-cols-2 gap-3">
-							<ProjectCard title="Project 1"
-										 description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus quae maxime quis ducimus, mollitia non vitae sapiente consequatur illo! Ipsam eveniet iusto delectus numquam illo suscipit tempore nostrum quibusdam voluptates!"
-										 tech={[1,2,3,4,5]}/>
-							<ProjectCard title="Project 1"
-										 description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus quae maxime quis ducimus, mollitia non vitae sapiente consequatur illo! Ipsam eveniet iusto delectus numquam illo suscipit tempore nostrum quibusdam voluptates!"
-										 tech={[1,2,3,4,5]}/>
+
+							{
+								projects.map(
+									(p)=>{return(
+											<ProjectCard 
+														title={p.title}
+										 				description={p.description}
+										 				tech={p.tech}
+														url={p.url},
+														repo={p.repo}
+										 				langs={p.langs}/>)})
+							}
 							
 	
 					</div>
