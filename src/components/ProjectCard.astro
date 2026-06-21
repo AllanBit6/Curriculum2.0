@@ -24,12 +24,21 @@ const {title, repo, url, description, tech, langs} = Astro.props;
             }
         </ul>
     </div>
+    <!--Prokect features -->
     <div>
         <ul class ="flex flex-row gap-2 flex-wrap">
             {
                     langs.map(
-                        (l:any) =>{return(
-                        <i class = {l + " px-3 py-1 rounded-[10px] border border-(--primary-color) bg-(--primary-color)/20 text-(--primary-color) text-[15px]"}></i>)})
+                        (l:any) =>{
+                            
+                            if(l=="fa-solid fa-cloud-arrow-up"){
+                                return(
+                        <i class = {l + " px-3 py-1 rounded-[10px] border border-(--success-color) bg-(--success-color)/20 text-(--success-color) text-[15px]"}></i>)
+                            }else{
+                                return(
+                        <i class = {l + " px-3 py-1 rounded-[10px] border border-(--primary-color) bg-(--primary-color)/20 text-(--primary-color) text-[15px]"}></i>)
+                            }
+                            })
             }
         </ul>
     </div>

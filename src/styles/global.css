@@ -2,14 +2,13 @@
 
 @theme {
     --primary-color: #e34d0a;
+    --success-color: #10b981;
     --prg-color: #969696;
 
     --title: Arial, Helvetica, sans-serif
 
-
+    
 }
-
-
 
 @layer utilities {
       /* Hide scrollbar for Chrome, Safari and Opera */
