@@ -2,9 +2,9 @@
 const { social } = Astro.props;
 ---
 
-<aside class="col-span-2 flex flex-col gap-10 w-[90%]">
+<aside class="col-span-2 flex flex-col gap-10 md:w-[90%] w-full md:items-start items-center">
   <!--Info section -->
-  <div class="flex flex-col gap-5 w-[60%]">
+  <div class="flex flex-col gap-5 md:w-[60%] w-[90%] md:items-start items-center">
     <!--Profile image-->
     <div
       class="bg-white h-50 w-50 rounded-2xl flex items-center justify-center shadow-lg shadow-[#e34d0a]/50"
@@ -12,13 +12,13 @@ const { social } = Astro.props;
       <img src="/profile.png" class="w-full h-full object-cover rounded-2xl" />
     </div>
     <!--Profile info-->
-    <div class="flex flex-col">
-      <h1 class="font-sans font-bold text-3xl text-white">Allan Vasquez</h1>
-      <h2 class="text-(--prg-color)">Junior Full Stack Developer</h2>
+    <div class="flex flex-col md:text-left text-center">
+      <h1 class="font-sans font-bold md:text-3xl text-4xl text-white">Allan Vasquez</h1>
+      <h2 class="text-(--prg-color) md:text-[16px] text-[20px]">Junior Full Stack Developer</h2>
     </div>
-    <div class="flex flex-row items-center gap-2">
+    <div class="flex lg:flex-row flex-col items-center gap-2">
       <i class="fa-solid fa-globe-americas text-(--prg-color)"></i>
-      <p class="text-(--prg-color) text-[14px]">Totonicapan, Guatemala</p>
+      <p class="text-(--prg-color) text-[14px] md:text-left text-center">Totonicapan, Guatemala</p>
     </div>
     <div class="">
       <ul class="flex flex-row justify-between">
@@ -39,9 +39,9 @@ const { social } = Astro.props;
 
   <!-- About Section -->
   <div>
-    <div class="flex flex-col gap-10 w-[85%]">
+    <div class="flex flex-col gap-10 md:w-[85%] w-full">
       <h1 class="text-white text-3xl">About</h1>
-      <p class="text-(--prg-color) text-[14px]">
+      <p class="text-(--prg-color) text-[14px] text-justify">
         Junior Full Stack Developer with a passion for building web
         applications. Currently seeking opportunities to further develop my
         skills in a professional setting.
