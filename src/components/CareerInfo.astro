@@ -2,7 +2,7 @@
 import ExperienceCard from "../components/ExperienceCard.astro";
 import ProjectCard from "../components/ProjectCard.astro";
 
-const {experiences, projects, skills} = Astro.props;
+const {experiences, projects, skills, education, certificates} = Astro.props;
 ---
 
 
@@ -71,4 +71,71 @@ const {experiences, projects, skills} = Astro.props;
 							}
 						</div>
 					</div>
+
+					<!--Education block -->
+					<div class="flex flex-col gap-10 w-full">
+						<h2 class ="text-white text-3xl">Education</h2>
+
+						<!--Education cards-->
+						<div class="flex flex-col gap-5">
+							{
+								education.map(
+									(ed:any) => {
+										return(
+											<div class ="grid grid-cols-10 items-center justify-center">
+												<div class="col-span-8 flex flex-row gap-5">
+													<i class="fa-solid fa-graduation-cap text-white text-[20px]"></i>
+													<div class="flex flex-col">
+														<a href={ed.url}>
+															<p class="text-white font-bold hover:text-(--primary-color)">{ed.school}</p>
+														</a>														
+														<p class="text-(--prg-color)">{ed.grade}</p>
+													</div>
+													
+												</div>
+												<div class="col-span-2 flex flex-row-reverse">
+													<p class="text-(--prg-color)">{ed.time}</p>
+												</div>
+											</div>
+										)})
+
+							}
+							
+						</div>
+						
+					</div>
+
+					<!--Certificates and diplomas block -->
+					<div class="flex flex-col gap-10 w-full">
+						<h2 class ="text-white text-3xl">Certificates and Diplomas</h2>
+
+						<!--Diplomas cards-->
+						<div class="flex flex-col gap-5">
+							{
+								certificates.map(
+									(c:any) => {
+										return(
+											<div class ="grid grid-cols-10 items-center justify-center">
+												<div class="col-span-8 flex flex-row gap-5">
+													<i class="fa-solid fa-award text-white text-[20px]"></i>
+													<div class="flex flex-col">
+														<a href={c.url}>
+															<p class="text-white font-bold hover:text-(--primary-color)">{c.name}</p>
+														</a>														
+														<p class="text-(--prg-color)">{c.platform}</p>
+													</div>
+													
+												</div>
+												<div class="col-span-2 flex flex-row-reverse">
+													<p class="text-(--prg-color)">{c.time}</p>
+												</div>
+											</div>
+										)})
+
+							}
+							
+						</div>
+						
+					</div>
+
 			</article>
