@@ -7,6 +7,8 @@ import "../styles/global.css";
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 
+
+/*Extracted from FontAwesome*/
 const langs = {
 	py:{
 		title: "Python",
@@ -80,7 +82,7 @@ const langs = {
 	},
 	astro:{
 		title:"AstroJS",
-		icon:"fa-solid fa-a",
+		icon:"fa-brands fa-buysellads",
 		type:"lang"
 	},
 	collab:{
@@ -101,7 +103,71 @@ const langs = {
 
 }
 
-//Edit svg colors on file src/assets/
+const skills = [
+	[
+		"Python",
+		"fa-brands fa-python",
+
+	],
+	[
+		"React.JS",
+		"fa-brands fa-react",
+	],
+	[
+		"AstroJS",
+		"fa-brands fa-buysellads",
+	],
+	[
+		"Tailwind CSS",
+		"fa-brands fa-tailwind-css",
+	],
+	[
+		"Java",
+		"fa-brands fa-java",
+	],
+	[
+		"HTML 5",
+		"fa-brands fa-html5",
+	],
+	[
+		"JavaScript",
+		"fa-brands fa-js",
+	],
+	[
+		"TypeScript",
+		"fa-brands fa-typescript",
+	],
+	[
+		"C++",
+		"fa-solid fa-c",
+	],
+		[
+		"MySQL",
+		"fa-solid fa-database",
+	],
+	[
+		"Git/GitHub",
+		"fa-brands fa-git-alt",
+	],
+	[
+		"Deployment",
+		"fa-solid fa-cloud-arrow-up",
+	],
+	[
+		"Cloudflare",
+		"fa-brands fa-cloudflare",
+
+	],
+	[
+		"Office Package",
+		"fa-brands fa-microsoft",
+	],
+	[
+		"Figma",
+		"fa-brands fa-figma"
+	]
+]
+
 const social = [
 	{
 		name: "LinkedIn",
@@ -222,22 +288,6 @@ const projects = [
 		url:"#",
 		repo:"#",
 		langs:[langs.cpp, langs.escolar]
-	},
-	{
-		title:"Escolar Administration - Escolar",
-		description:"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus quae maxime quis ducimus, mollitia non vitae sapiente consequatur illo! Ipsam eveniet iusto delectus numquam illo suscipit tempore nostrum quibusdam voluptates!",
-		tech:[1,2,3],
-		url:"#",
-		repo:"#",
-		langs:[langs.cpp, langs.escolar]
-	},
-	{
-		title:"Escolar Administration - Escolar",
-		description:"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus quae maxime quis ducimus, mollitia non vitae sapiente consequatur illo! Ipsam eveniet iusto delectus numquam illo suscipit tempore nostrum quibusdam voluptates!",
-		tech:[1,2,3],
-		url:"#",
-		repo:"#",
-		langs:[langs.cpp, langs.escolar]
 	}
 ]
 
@@ -254,7 +304,8 @@ const projects = [
 			<ProfileInfo social={social}/>
 			<CareerInfo experiences={experiences} 
 						projects = {projects}
-						langs={langs}/>
+						langs={langs}
+						skills={skills}/>
 			
 		</main>
 
