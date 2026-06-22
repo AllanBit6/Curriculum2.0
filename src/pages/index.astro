@@ -8,21 +8,78 @@ import "../styles/global.css";
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 
 const langs = {
-	py:"fa-brands fa-python",
-	react:"fa-brands fa-react",
-	tailwind:"fa-brands fa-tailwind-css",
-	java:"fa-brands fa-java",
-	js:"fa-brands fa-js",
-	db:"fa-solid fa-database",
-	github:"fa-brands fa-git-alt",
-	google:"fa-brands fa-google",
-	html:"fa-brands fa-html5",
-	ts: "fa-brands fa-typescript",
-	cpp: "fa-solid fa-c",
-	postgres:"fa-brands fa-postgresql",
-	mobile:"fa-solid fa-mobile",
-	cloud:"fa-solid fa-cloud-arrow-up",
-	astro:"fa-solid fa-a"
+	py:{
+		title: "Python",
+		icon: "fa-brands fa-python"
+	},
+	react:{
+		title: "React.JS",
+		icon:"fa-brands fa-react"
+	},
+	tailwind:{
+		title:"Tailwind CSS",
+		icon:"fa-brands fa-tailwind-css"
+	},
+	java:{
+		title:"Java",
+		icon:"fa-brands fa-java"
+	},
+	js:{
+		title:"JavaScript",
+		icon:"fa-brands fa-js"
+	},
+	db:{
+		title:"MySQL",
+		icon:"fa-solid fa-database"
+	},
+	github:{
+		title:"GitHub",
+		icon:"fa-brands fa-git-alt"
+	},
+	google:{
+		title:"Google Technologies",
+		icon:"fa-brands fa-google"
+	},
+	html:{
+		title:"HTML 5",
+		icon:"fa-brands fa-html5"
+	},
+	ts: {
+		title:"TypeScript",
+		icon:"fa-brands fa-typescript"
+	},
+	cpp: {
+		title:"C++",
+		icon:"fa-solid fa-c"
+	},
+	postgres:{
+		title:"Postgres",
+		icon:"fa-brands fa-postgresql"
+	},
+	mobile:{
+		title:"Mobile Application",
+		icon:"fa-solid fa-mobile"
+	},
+	cloud:{
+		title: "Deployed",
+		icon:"fa-solid fa-cloud-arrow-up"
+	},
+	astro:{
+		title:"AstroJS",
+		icon:"fa-solid fa-a"
+	},
+	collab:{
+		title:"In Collaboration",
+		icon:"fa-solid fa-handshake"
+	},
+	escolar:{
+		title:"School and Learning Purposes",
+		icon:"fa-solid fa-school"
+	},
+	cloudflare:{
+		title:"Cloudflare",
+		icon:"fa-brands fa-cloudflare"
+	}
 
 }
 
@@ -89,45 +146,80 @@ const experiences = [
 
 const projects = [
 	{
-		title:"Clinix - Medic Tracker",
+		title:"Foundation Website - Astro Web",
 		description:"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus quae maxime quis ducimus, mollitia non vitae sapiente consequatur illo! Ipsam eveniet iusto delectus numquam illo suscipit tempore nostrum quibusdam voluptates!",
-		tech:["Developed doctor desktop client.","Made with ShadCN for UI, React TS.","Uses Google Auth.", "Contributed on Django backend,"],
-		url:"#",
-		repo:"#",
-		langs:[langs.react, langs.tailwind, langs.google, langs.github, langs.py]
+		tech:["Developed full website", "Deployed on vercel",3],
+		url:"https://www.transformandovidas.org.gt/",
+		repo:"https://github.com/AllanBit6/foundation-webpage",
+		langs:[langs.astro, langs.tailwind, langs.github, langs.cloudflare, langs.cloud]
+	}	
+	,
+	{
+		title:"Sales Net (front) - Custom POS",
+		description:"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus quae maxime quis ducimus, mollitia non vitae sapiente consequatur illo! Ipsam eveniet iusto delectus numquam illo suscipit tempore nostrum quibusdam voluptates!",
+		tech:["Co-developed frontend views","Developed administrative views (users and catalog)",""],
+		url:"https://sales-net.netlify.app/",
+		repo:"https://github.com/SEdwinFBI/sales-net-front",
+		langs:[langs.react, langs.tailwind, langs.mobile,langs.github, langs.collab, langs.cloud, ]
 	},
 	{
-		title:"Sales Net - Custom POS",
+		title:"Boutique POS (front)",
 		description:"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus quae maxime quis ducimus, mollitia non vitae sapiente consequatur illo! Ipsam eveniet iusto delectus numquam illo suscipit tempore nostrum quibusdam voluptates!",
 		tech:[1,2,3],
 		url:"#",
 		repo:"#",
 		langs:[langs.react, langs.tailwind, langs.mobile,langs.github, langs.cloud]
-	},
+	}
+	,
 	{
-		title:"Curriculum - Astro Web",
+		title:"Curriculum 2.0 - Astro Web",
 		description:"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus quae maxime quis ducimus, mollitia non vitae sapiente consequatur illo! Ipsam eveniet iusto delectus numquam illo suscipit tempore nostrum quibusdam voluptates!",
 		tech:[1,2,3],
 		url:"#",
 		repo:"#",
 		langs:[langs.astro, langs.tailwind, langs.google, langs.github, langs.cloud]
-	},
+	}
+	,
 	{
-		title:"Foundation Website - Astro Web",
+		title:"Clinix - Medic Tracker (front)",
 		description:"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus quae maxime quis ducimus, mollitia non vitae sapiente consequatur illo! Ipsam eveniet iusto delectus numquam illo suscipit tempore nostrum quibusdam voluptates!",
-		tech:[1,2,3],
+		tech:["Developed full doctor desktop client.","Made with ShadCN for UI, React TS.","Uses Google Auth.", "Contributed on Django backend,"],
 		url:"#",
 		repo:"#",
-		langs:[langs.astro, langs.tailwind, langs.github, langs.cloud]
-	},
-
+		langs:[langs.react, langs.tailwind, langs.google, langs.escolar, langs.github]
+	}
+	,
 	{
 		title:"Dates Administration - Escolar",
 		description:"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus quae maxime quis ducimus, mollitia non vitae sapiente consequatur illo! Ipsam eveniet iusto delectus numquam illo suscipit tempore nostrum quibusdam voluptates!",
 		tech:[1,2,3],
 		url:"#",
 		repo:"#",
-		langs:[langs.cpp]
+		langs:[langs.cpp, langs.escolar]
+	},
+	{
+		title:"Escolar Administration - Escolar",
+		description:"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus quae maxime quis ducimus, mollitia non vitae sapiente consequatur illo! Ipsam eveniet iusto delectus numquam illo suscipit tempore nostrum quibusdam voluptates!",
+		tech:[1,2,3],
+		url:"#",
+		repo:"#",
+		langs:[langs.cpp, langs.escolar]
+	},
+	{
+		title:"Escolar Administration - Escolar",
+		description:"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus quae maxime quis ducimus, mollitia non vitae sapiente consequatur illo! Ipsam eveniet iusto delectus numquam illo suscipit tempore nostrum quibusdam voluptates!",
+		tech:[1,2,3],
+		url:"#",
+		repo:"#",
+		langs:[langs.cpp, langs.escolar]
+	},
+	{
+		title:"Escolar Administration - Escolar",
+		description:"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus quae maxime quis ducimus, mollitia non vitae sapiente consequatur illo! Ipsam eveniet iusto delectus numquam illo suscipit tempore nostrum quibusdam voluptates!",
+		tech:[1,2,3],
+		url:"#",
+		repo:"#",
+		langs:[langs.cpp, langs.escolar]
 	}
 ]
 

@@ -1,46 +1,82 @@
 ---
-const {title, repo, url, description, tech, langs} = Astro.props;
+const { title, repo, url, description, tech, langs } = Astro.props;
 ---
 
-<div class ="grid grid-rows-8 items-start border gap-3 border-(--prg-color) rounded-[10px] bg-white/5 p-3">
-    <!--Project Header -->
-    <div class ="row-span-1 flex flex-row gap-3 items-center align-top">
-        <i class="fa-regular fa-folder text-white text-[17px]"></i>
-        <h3 class ="text-white text-[17px] hover:text-(--primary-color) hover:cursor-pointer"><a href={url}>{title}</a></h3>
-        <a href={repo}><i class="fa-brands fa-git-alt text-white text-[18px] hover:text-(--primary-color) hover:cursor-pointer"></i></a>
-    </div>
-    <!--Project description -->
-    <div class ="row-span-3">
-        <p class="text-(--prg-color) text-[14px] text-justify">{description}</p>
-    </div class ="col-span-1">
-    <!--Project skills -->
-    <div class ="row-span-3">
-        <ul class ="ml-5 gap-1 flex flex-col">
-            {tech.map(
-            (t:any) => {
-                return(
-                    <li class="text-(--prg-color) text-[14px] list-disc">{t}</li>
-                )})
-            }
-        </ul>
-    </div>
-    <!--Project features -->
-    <div class ="row-span-1">
-        <ul class ="flex flex-row gap-2 flex-wrap">
-            {
-                    langs.map(
-                        (l:any) =>{
-                            
-                            if(l=="fa-solid fa-cloud-arrow-up"){
-                                return(
-                        <i class = {l + " px-3 py-1 rounded-[10px] border border-(--success-color) bg-(--success-color)/20 text-(--success-color) text-[15px]"}></i>)
-                            }else{
-                                return(
-                        <i class = {l + " px-3 py-1 rounded-[10px] border border-(--primary-color) bg-(--primary-color)/20 text-(--primary-color) text-[15px]"}></i>)
-                            }
-                            })
-            }
-        </ul>
-    </div>
-
+<div
+  class="grid grid-rows-9 items-start border gap-3 border-(--prg-color) rounded-[10px] bg-white/5 p-3"
+>
+  <!--Project Header -->
+  <div class="row-span-2 flex flex-row gap-3 items-center align-top">
+    <i class="fa-regular fa-folder text-white text-[17px]"></i>
+    <h3
+      class="text-white text-[17px] hover:text-(--primary-color) hover:cursor-pointer"
+    >
+      <a href={url}>{title}</a>
+    </h3>
+    <a href={repo}
+      ><i
+        class="fa-brands fa-git-alt text-white text-[18px] hover:text-(--primary-color) hover:cursor-pointer"
+      ></i></a
+    >
+  </div>
+  <!--Project description -->
+  <div class="row-span-3">
+    <p class="text-(--prg-color) text-[14px] text-justify">{description}</p>
+  </div>
+  <!--Project skills -->
+  <div class="row-span-3">
+    <ul class="ml-5 gap-1 flex flex-col">
+      {
+        tech.map((t: any) => {
+          return <li class="text-(--prg-color) text-[14px] list-disc">{t}</li>;
+        })
+      }
+    </ul>
+  </div>
+  <!--Project features -->
+  <div class="row-span-1">
+    <ul class="flex flex-row gap-2 flex-wrap">
+      {
+        langs.map((l: any) => {
+          if (l == "fa-solid fa-cloud-arrow-up") {
+            return (
+              <i
+                class={
+                  l.icon +
+                  " px-3 py-1 rounded-[10px] border border-(--success-color) bg-(--success-color)/20 text-(--success-color) text-[15px]"
+                }
+              />
+            );
+          } else if (l == "fa-solid fa-handshake") {
+            return (
+              <i
+                class={
+                  l.icon +
+                  " px-3 py-1 rounded-[10px] border border-(--blue-color) bg-(--blue-color)/20 text-(--blue-color) text-[15px]"
+                }
+              />
+            );
+          } else if (l.icon == "fa-solid fa-school") {
+            return (
+              <i
+                class={
+                  l.icon +
+                  " px-3 py-1 rounded-[10px] border border-(--yellow-color) bg-(--yellow-color)/20 text-(--yellow-color) text-[15px]"
+                }
+              />
+            );
+          } else {
+            return (
+              <i title="Holaaaa"
+                class={
+                  l.icon +
+                  " px-3 py-1 rounded-[10px] border border-(--primary-color) bg-(--primary-color)/20 text-(--primary-color) text-[15px]"
+                }
+              />
+            );
+          }
+        })
+      }
+    </ul>
+  </div>
 </div>
