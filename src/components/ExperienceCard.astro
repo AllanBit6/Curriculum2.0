@@ -10,13 +10,15 @@ const { title,
         skills} = Astro.props;
 ---
 
-<div class ="grid grid-cols-7 w-full">
+<div class ="lg:grid lg:grid-cols-7 flex flex-row w-full">
     <!--Date-->
-    <div class ="col-span-1 border-r border-(--prg-color)">
-        <p class ="text-white font-bold text-[14px]">{date}</p>
+    <div class ="lg:col-span-1 border-r border-(--prg-color)">
+        <p class ="text-white font-bold text-[14px] md:block hidden">{date}</p>
     </div>
-    <div class ="col-span-6 bg-gray md:max-h-125 md:overflow-scroll no-scrollbar">
+    <div class ="lg:col-span-6 bg-gray md:max-h-125 md:overflow-scroll no-scrollbar">
         <div class ="ml-5 flex flex-col gap-5">
+            <p class ="text-white font-bold text-[14px] md:hidden block">{date}</p>
+
             <!--Experience header -->
             <div>
                 <h3 class="text-white lg:text-[20px] text-2xl">{title} @ <a href={url} class ="text-(--primary-color) hover:text-white/80">{enterprise}</a></h3>
