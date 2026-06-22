@@ -1,7 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import ExperienceCard from "../components/ExperienceCard.astro";
-import ProjectCard from "../components/ProjectCard.astro";
+import ProfileInfo from "../components/ProfileInfo.astro";
+import CareerInfo from "../components/CareerInfo.astro";
 import "../styles/global.css";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
@@ -10,75 +10,93 @@ import "../styles/global.css";
 const langs = {
 	py:{
 		title: "Python",
-		icon: "fa-brands fa-python"
+		icon: "fa-brands fa-python",
+		type:"lang"
 	},
 	react:{
 		title: "React.JS",
-		icon:"fa-brands fa-react"
+		icon:"fa-brands fa-react",
+		type:"lang"
 	},
 	tailwind:{
 		title:"Tailwind CSS",
-		icon:"fa-brands fa-tailwind-css"
+		icon:"fa-brands fa-tailwind-css",
+		type:"lang"
 	},
 	java:{
 		title:"Java",
-		icon:"fa-brands fa-java"
+		icon:"fa-brands fa-java",
+		type:"lang"
 	},
 	js:{
 		title:"JavaScript",
-		icon:"fa-brands fa-js"
+		icon:"fa-brands fa-js",
+		type:"lang"
 	},
 	db:{
 		title:"MySQL",
-		icon:"fa-solid fa-database"
+		icon:"fa-solid fa-database",
+		type:"lang"
 	},
 	github:{
 		title:"GitHub",
-		icon:"fa-brands fa-git-alt"
+		icon:"fa-brands fa-git-alt",
+		type:"lang"
 	},
 	google:{
 		title:"Google Technologies",
-		icon:"fa-brands fa-google"
+		icon:"fa-brands fa-google",
+		type:"lang"
 	},
 	html:{
 		title:"HTML 5",
-		icon:"fa-brands fa-html5"
+		icon:"fa-brands fa-html5",
+		type:"lang"
 	},
 	ts: {
 		title:"TypeScript",
-		icon:"fa-brands fa-typescript"
+		icon:"fa-brands fa-typescript",
+		type:"lang"
 	},
 	cpp: {
 		title:"C++",
-		icon:"fa-solid fa-c"
+		icon:"fa-solid fa-c",
+		type:"lang"
 	},
 	postgres:{
 		title:"Postgres",
-		icon:"fa-brands fa-postgresql"
+		icon:"fa-brands fa-postgresql",
+		type:"lang"
 	},
 	mobile:{
 		title:"Mobile Application",
-		icon:"fa-solid fa-mobile"
+		icon:"fa-solid fa-mobile",
+		type:"lang"
 	},
 	cloud:{
 		title: "Deployed",
-		icon:"fa-solid fa-cloud-arrow-up"
+		icon:"fa-solid fa-cloud-arrow-up",
+		type:"deploy"
 	},
 	astro:{
 		title:"AstroJS",
-		icon:"fa-solid fa-a"
+		icon:"fa-solid fa-a",
+		type:"lang"
 	},
 	collab:{
 		title:"In Collaboration",
-		icon:"fa-solid fa-handshake"
+		icon:"fa-solid fa-handshake",
+		type:"collab"
 	},
 	escolar:{
 		title:"School and Learning Purposes",
-		icon:"fa-solid fa-school"
+		icon:"fa-solid fa-school",
+		type:"learning"
 	},
 	cloudflare:{
 		title:"Cloudflare",
-		icon:"fa-brands fa-cloudflare"
+		icon:"fa-brands fa-cloudflare",
+		type:"lang"
 	}
 
 }
@@ -166,8 +184,8 @@ const projects = [
 		title:"Boutique POS (front)",
 		description:"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus quae maxime quis ducimus, mollitia non vitae sapiente consequatur illo! Ipsam eveniet iusto delectus numquam illo suscipit tempore nostrum quibusdam voluptates!",
 		tech:[1,2,3],
-		url:"#",
-		repo:"#",
+		url:"https://front-proyecto-boutique.vercel.app/",
+		repo:"https://github.com/AllanBit6/front-proyecto-boutique",
 		langs:[langs.react, langs.tailwind, langs.mobile,langs.github, langs.cloud]
 	}
 	,
@@ -175,9 +193,9 @@ const projects = [
 		title:"Curriculum 2.0 - Astro Web",
 		description:"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus quae maxime quis ducimus, mollitia non vitae sapiente consequatur illo! Ipsam eveniet iusto delectus numquam illo suscipit tempore nostrum quibusdam voluptates!",
 		tech:[1,2,3],
-		url:"#",
-		repo:"#",
-		langs:[langs.astro, langs.tailwind, langs.google, langs.github, langs.cloud]
+		url:"https://curriculum2-0-tau.vercel.app/",
+		repo:"https://github.com/AllanBit6/Curriculum2.0",
+		langs:[langs.astro, langs.tailwind, langs.github, langs.cloud]
 	}
 	,
 	{
@@ -231,107 +249,12 @@ const projects = [
 
 <Layout>
 	<div class ="p-15">
-		<main class="grid grid-cols-6 min-h-screen">
-			<aside class = "col-span-2 flex flex-col gap-10 w-[90%]">
-
-				<!--Info section -->
-				<div class = "flex flex-col gap-5 w-[60%]">
-					<!--Profile image-->
-					<div class="bg-white h-50 w-50 rounded-2xl flex items-center justify-center shadow-lg shadow-[#e34d0a]/50">
-						<img src="/profile.png" class="w-full h-full object-cover rounded-2xl"/>
-					</div>
-					<!--Profile info-->
-					<div class ="flex flex-col">
-						<h1 class ="font-sans font-bold text-3xl text-white">Allan Vasquez</h1>
-						<h2 class ="text-(--prg-color)">Junior Full Stack Developer</h2>
-					</div>
-					<div class="flex flex-row items-center gap-2">
-						<i class="fa-solid fa-globe-americas text-(--prg-color)"></i>
-						<p class ="text-(--prg-color) text-[14px]">Totonicapan, Guatemala</p>
-					</div>
-					<div class ="">
-						<ul class ="flex flex-row justify-between">
-							{
-								social.map(
-									(s) =>{
-										return(
-										<li class ="p-1 rounded-[10px] hover:bg-white/10">
-											<a href={s.url}>
-												<i class={s.svg + " text-(--primary-color) text-2xl"}></i>	
-											</a>
-										</li>
-									)
-									}
-								)
-
-							}
-						</ul>
-					</div>
-				</div>
-
-				<!-- About Section -->
-				<div>
-					<div class ="flex flex-col gap-10 w-[85%]">
-						<h1 class="text-white text-3xl">About</h1>
-						<p class="text-(--prg-color) text-[14px]">
-							Junior Full Stack Developer with a passion for
-							building web applications. Currently 
-							seeking opportunities to further develop 
-							my skills in a professional setting.
-						</p>
-					</div>
-				</div>		
-				
-			</aside>
-
-			<article class ="col-span-4 w-[95%]">
-				<div class="flex flex-col gap-20">
-					<!--Experiences block-->
-					<div class ="flex flex-col gap-10">
-						<h2 class ="text-white text-3xl">Experience</h2>
-						<div class ="flex flex-col gap-5">
-							{experiences.map(
-								(ex)=>{
-									return(
-										<div>
-											<hr class ="w-[25%] m-3 border-1/2 border-(--prg-color)"/>
-											<ExperienceCard date={ex.date}
-												title={ex.title}
-												location={ex.location}
-												enterprise={ex.enterprise}
-												summary={ex.summary}
-												responsabilities={ex.responsabilities}
-												achievements={ex.achievements}
-												skills={ex.skills}
-												url={ex.url}/>
-										</div>
-									)
-								}
-							)}
-						</div>	
-					</div>
-
-					<!--Projects block-->
-					<div class ="flex flex-col gap-10">
-						<h2 class ="text-white text-3xl">Projects</h2>
-						<div class ="grid grid-cols-2 gap-3">
-
-							{
-								projects.map(
-									(p)=>{return(
-											<ProjectCard 
-														title={p.title}
-										 				description={p.description}
-										 				tech={p.tech}
-														url={p.url},
-														repo={p.repo}
-										 				langs={p.langs}/>)})
-							}
-							
-	
-					</div>
-				</div>
-			</article>
+		<main class="lg:grid lg:grid-cols-6 min-h-screen flex flex-col md:gap-3 gap-30">
+			
+			<ProfileInfo social={social}/>
+			<CareerInfo experiences={experiences} 
+						projects = {projects}
+						langs={langs}/>
 			
 		</main>
 

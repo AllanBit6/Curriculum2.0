@@ -1,0 +1,56 @@
+---
+import ExperienceCard from "../components/ExperienceCard.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+
+const {experiences, projects, langs} = Astro.props;
+---
+
+
+<article class ="col-span-4 w-[95%]">
+				<div class="flex flex-col gap-20">
+					<!--Experiences block-->
+					<div class ="flex flex-col gap-10">
+						<h2 class ="text-white text-3xl">Experience</h2>
+						<div class ="flex flex-col gap-5">
+							{experiences.map(
+								(ex:any)=>{
+									return(
+										<div>
+											<hr class ="w-[25%] m-3 border-1/2 border-(--prg-color)"/>
+											<ExperienceCard date={ex.date}
+												title={ex.title}
+												location={ex.location}
+												enterprise={ex.enterprise}
+												summary={ex.summary}
+												responsabilities={ex.responsabilities}
+												achievements={ex.achievements}
+												skills={ex.skills}
+												url={ex.url}/>
+										</div>
+									)
+								}
+							)}
+						</div>	
+					</div>
+
+					<!--Projects block-->
+					<div class ="flex flex-col gap-10">
+						<h2 class ="text-white text-3xl">Projects</h2>
+						<div class ="grid lg:grid-cols-2 md:grid-cols-1 gap-3">
+
+							{
+								projects.map(
+									(p:any)=>{return(
+											<ProjectCard 
+														title={p.title}
+										 				description={p.description}
+										 				tech={p.tech}
+														url={p.url},
+														repo={p.repo}
+										 				langs={p.langs}/>)})
+							}
+							
+	
+					</div>
+				</div>
+			</article>

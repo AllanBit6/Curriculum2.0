@@ -9,7 +9,7 @@ const { title, repo, url, description, tech, langs } = Astro.props;
   <div class="row-span-2 flex flex-row gap-3 items-center align-top">
     <i class="fa-regular fa-folder text-white text-[17px]"></i>
     <h3
-      class="text-white text-[17px] hover:text-(--primary-color) hover:cursor-pointer"
+      class="text-white text-[18px] hover:text-(--primary-color) hover:cursor-pointer"
     >
       <a href={url}>{title}</a>
     </h3>
@@ -38,7 +38,7 @@ const { title, repo, url, description, tech, langs } = Astro.props;
     <ul class="flex flex-row gap-2 flex-wrap">
       {
         langs.map((l: any) => {
-          if (l == "fa-solid fa-cloud-arrow-up") {
+          if (l.type == "deploy") {
             return (
               <i
                 class={
@@ -47,7 +47,7 @@ const { title, repo, url, description, tech, langs } = Astro.props;
                 }
               />
             );
-          } else if (l == "fa-solid fa-handshake") {
+          } else if (l.type == "collab") {
             return (
               <i
                 class={
@@ -56,7 +56,7 @@ const { title, repo, url, description, tech, langs } = Astro.props;
                 }
               />
             );
-          } else if (l.icon == "fa-solid fa-school") {
+          } else if (l.type == "learning") {
             return (
               <i
                 class={
