@@ -38,44 +38,25 @@ const { title, repo, url, description, tech, langs } = Astro.props;
     <ul class="flex flex-row gap-2 flex-wrap">
       {
         langs.map((l: any) => {
-          if (l.type == "deploy") {
-            return (
-              <i
-                class={
-                  l.icon +
-                  " px-3 py-1 rounded-[10px] border border-(--success-color) bg-(--success-color)/20 text-(--success-color) text-[15px]"
-                }
-              />
-            );
-          } else if (l.type == "collab") {
-            return (
-              <i
-                class={
-                  l.icon +
-                  " px-3 py-1 rounded-[10px] border border-(--blue-color) bg-(--blue-color)/20 text-(--blue-color) text-[15px]"
-                }
-              />
-            );
-          } else if (l.type == "learning") {
-            return (
-              <i
-                class={
-                  l.icon +
-                  " px-3 py-1 rounded-[10px] border border-(--yellow-color) bg-(--yellow-color)/20 text-(--yellow-color) text-[15px]"
-                }
-              />
-            );
-          } else {
-            return (
-              <i title="Holaaaa"
-                class={
-                  l.icon +
-                  " px-3 py-1 rounded-[10px] border border-(--primary-color) bg-(--primary-color)/20 text-(--primary-color) text-[15px]"
-                }
-              />
-            );
+
+          let color = "";
+          switch(l.type){
+              
+              case "collab": 
+                color = "--blue-color"
+                break;
+              case "deploy": 
+                color = "--success-color"
+                break;
+              case "learning": 
+                color = "--yellow-color"
+                break;
+              case "lang": 
+                color = "--primary-color"
+                break;
           }
-        })
+          return (
+              <i class={l.icon+" px-3 py-1 rounded-[10px] border border-() bg-("+color+")/20 text-("+ color+") text-[15px]"}/>)})
       }
     </ul>
   </div>
