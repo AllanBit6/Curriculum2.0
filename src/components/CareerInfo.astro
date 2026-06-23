@@ -62,8 +62,8 @@ const {experiences, projects, skills, education, certificates} = Astro.props;
 								skills.map(
 									(m:any) => {
 										return(
-										<div class ="flex flex-row gap-1 items-center">
-											<i class = {m[1] + " text-2xl text-(--primary-color)"}></i>
+										<div class ="flex flex-row gap-1 items-center hover:translate-y-0.5 hover:transition">
+											<i class = {m[1] + " text-2xl text-(--primary-color) "}></i>
 											<p class ="text-(--prg-color)">{m[0]}</p>
 										</div>
 									)})

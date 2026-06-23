@@ -3,7 +3,7 @@ const { title, repo, url, description, tech, langs } = Astro.props;
 ---
 
 <div
-  class="flex h-full flex-col gap-4 rounded-[10px] border border-(--prg-color) bg-white/3 p-4"
+  class="flex h-full flex-col gap-4 rounded-[10px] border border-(--prg-color) bg-white/3 p-4 hover:translate-y-0.5 hover:transition"
 >
   <!--Project Header -->
   <div class="flex flex-row items-center gap-3">
@@ -65,7 +65,7 @@ const { title, repo, url, description, tech, langs } = Astro.props;
                 title={l.title}
                 aria-label={l.title} 
                 class={classIcon}></i>
-              <p class="text-white text-[10px]">{l.title}</p>
+              <p class="text-(--prg-color) text-[10px]">{l.title}</p>
             </span>
  
               )

@@ -113,6 +113,12 @@ const skills = [
 		"React JS",
 		"fa-brands fa-react",
 	],
+	
+	[
+		"Flask APIs",
+		"fa-solid fa-pepper-hot"
+	]
+	,
 	[
 		"Astro JS",
 		"fa-brands fa-buysellads",
@@ -200,13 +206,13 @@ const social = [
 const experiences = [
 		{
 		title:"Desarrollador full stack freelance", 
-		date:"2026-Actualidad", 
+		date:"2026-Ahora",
 		enterprise:"Code-QX",
 		location:"Trabajo remoto", 
 		url:"#", 
-		summary:"Creación de un estudio propio de desarrollo de software, especializado en desarrollar sistemas administrativos para empresas emergentes y en crecimiento.", 
-		responsabilities:["Reuniones con el cliente para definir sus necesidades y establecer requerimientos", "Líder y product owner (SCRUM) del equipo de desarrollo", "Reuniones y demostraciones con el cliente sobre nuevas versiones y funcionalidades"], 
-		achievements:["Logro 1", "Logro 2", "Logro 3"],
+		summary:"Creación y gestión de un estudio de software enfocado en sistemas administrativos para empresas emergentes.",
+		responsabilities:["Definición de necesidades y requerimientos con clientes", "Liderazgo del equipo y gestión del producto con SCRUM", "Presentación de versiones y nuevas funcionalidades"],
+		achievements:["Captación de los primeros clientes", "Despliegue de dos sistemas de punto de venta", "Desarrollo frontend y contribuciones puntuales al backend"],
 		skills:["React JS", "Tailwind CSS", "Python Django", "Vite", "GitHub", "Trello", "Comunicación", "Planificación", "Persuasión"]
 	},
 	{
@@ -214,9 +220,9 @@ const experiences = [
         date:"2025-2026", 
         enterprise:"Telus Digital Xela",
         location:"Quetzaltenango, Guatemala", 
-        url:"#", 
-		summary:"Encargado de brindar soporte remoto por teléfono a los usuarios del sitio web de una empresa de paquetería.", 
-		responsabilities:["Orientación para configurar cuentas nuevas", "Documentación y resolución de tickets pendientes", "Provisión de soluciones alternativas para distintas situaciones relacionadas con el sitio web"], 
+        url:"https://www.facebook.com/TELUSDigitalxela",
+		summary:"Soporte técnico remoto para usuarios de la plataforma web de una empresa de paquetería.",
+		responsabilities:["Configuración y orientación de cuentas nuevas", "Documentación y resolución de tickets", "Propuesta de soluciones alternativas para incidencias del sitio web"],
 		achievements:["Seleccionado para formar parte de la nueva generación de LBO (generación 3) en Guatemala"],
 		skills:["Inglés", "Multitarea", "Gestión de tickets", "Trabajo bajo presión"]
 	},
@@ -225,19 +231,19 @@ const experiences = [
         date:"2023-2025", 
         enterprise:"Instituto Tecnologico Teczion",
         location:"Totonicapan, Guatemala", 
-        url:"#", 
-        summary:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed voluptatibus laboriosam molestiae assumenda, optio distinctio voluptates vero possimus voluptate, minima facere quo? Reiciendis dignissimos vero maiores molestias possimus id cum.", 
-		responsabilities:["Responsabilidad 1", "Responsabilidad 1", "Responsabilidad 1"], 
-		achievements:["Logro 1", "Logro 2", "Logro 3"],
-		skills:["React", "Tailwind", "Vite", "GitHub", "Trello", "Comunicación", "Planificación", "Persuasión"]
+        url:"https://www.facebook.com/tecnologico.teczion",
+        summary:"Docente de programación e informática para estudiantes de nivel básico y diversificado, responsable también del laboratorio de cómputo.",
+		responsabilities:["Impartición de clases de programación y computación", "Gestión de un laboratorio con 40 computadoras, red e infraestructura", "Elaboración de informes mensuales de calificaciones"],
+		achievements:["Actualización de contenidos hacia tecnologías modernas", "Incorporación de nuevo equipo para el laboratorio", "Reestructuración de la planificación mensual y anual"],
+		skills:["HTML", "JavaScript", "CSS", "Python", "C++", "Planificación", "Microsoft Office", "Adobe Creative Cloud" ,"Reportes", "Mantenimiento"]
 	}
 ]
 
 const projects = [
 	{
 		title:"Sitio web de fundación",
-		description:"Sitio web estático para una fundación educativa creado con Astro y estilizado con Tailwind CSS. Desplegado con un dominio y amigable con motores de busqueda mediante SEO. Cuenta con efectos de scroll fading y efectos visuales con JS.",
-		tech:["Desarrollo completo del sitio web.", "Desplegado en Vercel.","Conexión con Cloudflare para DNS y dominio registrado."],
+		description:"Sitio web para una fundación educativa, desarrollado con Astro y Tailwind CSS, optimizado para SEO y con efectos visuales en JavaScript.",
+		tech:["Desarrollo completo del sitio", "Despliegue en Vercel", "Configuración de dominio y DNS con Cloudflare"],
 		url:"https://www.transformandovidas.org.gt/",
 		repo:"https://github.com/AllanBit6/foundation-webpage",
 		langs:[langs.astro, langs.tailwind, langs.github, langs.cloudflare, langs.cloud]
@@ -245,16 +251,16 @@ const projects = [
 	,
 	{
 		title:"Sales Net (front only)",
-		description:"Aplicación de ventas altamente personalizado para la gestión de ventas, clientes y usuarios de una maquila de productos de indumentaria guatemalteca. Hecho con React, estilizado con Tailwind y desplegado en Netlify y disponible para uso en móvil y desktop de manera interna.",
-		tech:["Desarrollo colaborativo de vistas del frontend","Desarrollo de vistas administrativas (usuarios y catálogo).", "Desplegado como Progressive Web App.", "Backend desarrollado por colaborador externo", "Demas vistas del fron desarrollados por colaborador externo"],
+		description:"Sistema interno para gestionar ventas, clientes y usuarios de una empresa de indumentaria, disponible en escritorio y móvil.",
+		tech:["Frontend colaborativo con React y Tailwind CSS", "Vistas administrativas de usuarios y catálogo", "PWA desplegada en Netlify; backend desarrollado por un colaborador"],
 		url:"https://sales-net.netlify.app/",
 		repo:"https://github.com/SEdwinFBI/sales-net-front",
 		langs:[langs.react, langs.tailwind, langs.mobile,langs.github, langs.collab, langs.cloud, ]
 	},
 	{
 		title:"Boutique POS (front only)",
-		description:"Aplicación de ventas basado en un mini-ERP para la gestión de ventas, usuarios, stock y generación de códigos de barras basadas en código del producto para un negocio de venta de ropa. Hecho con React, estilizado con Tailwind y utilizable tanto en desktop como desplegado en Vercel para uso móvil.",
-		tech:["Empaquetado en un contenedor Web de Electron.JS para escritorio","Empaquetado en una Progressive Web App para su uso en móvil.", "Soporte para uso con lector de codigo de barras.", "Backend desarrollado por colaborador externo"],
+		description:"Mini-ERP para una boutique que centraliza ventas, usuarios, inventario y generación de códigos de barras.",
+		tech:["Aplicación de escritorio empaquetada con Electron", "PWA para dispositivos móviles", "Soporte para lector de códigos de barras; backend externo"],
 		url:"https://front-proyecto-boutique.vercel.app/",
 		repo:"https://github.com/AllanBit6/front-proyecto-boutique",
 		langs:[langs.react, langs.tailwind, langs.mobile, langs.github, langs.collab, langs.cloud]
@@ -262,8 +268,8 @@ const projects = [
 	,
 	{
 		title:"Curriculum 2.0",
-		description:"Sitio web estático para presentación de portafolio personal desarrollado con Astro y estilizado con Tailwind. Implementa tecnologías de traducción según condicionamiento URL. Estilizado con efectos de Scroll fading y parallaxing como efectos visuales. Posee implementación responsive.",
-		tech:["Implementa tecnologia de traducción basado en archivos", "Implementa principios de accesibilidad para mejor posicionamiento web", "Efectos de Scroll Parallaxing hechos sin dependencias externas."],
+		description:"Portafolio personal responsive desarrollado con Astro y Tailwind CSS, con traducción por URL y efectos de desplazamiento.",
+		tech:["Traducción basada en archivos", "Principios de accesibilidad y SEO", "Efectos de parallax sin dependencias externas"],
 		url:"https://curriculum2-0-tau.vercel.app/",
 		repo:"https://github.com/AllanBit6/Curriculum2.0",
 		langs:[langs.astro, langs.tailwind, langs.github, langs.cloud]
@@ -271,8 +277,8 @@ const projects = [
 	,
 	{
 		title:"Clinix (Front only)",
-		description:"Aplicacion de seguimiento de tratamientos médicos hecho en React y estilizado con Tailwind CSS. Cuenta con autenticación por medio de Google Auth. Permite crear tratamientos, medicamentos y asignarlos via QR a un cliente paciente. El sistema tambien genera reportes de tomas y estadísticas generales.",
-		tech:["Desarrollo completo del cliente de escritorio para médicos.","Interfaz creada con ShadCN y React con TypeScript.","Utiliza autenticación de Google.", "Contribución ocasional al backend desarrollado con Django.", "Backend desarrollado por colaborador externo","Proyecto Universitario realizado con fines de aprendizaje."],
+		description:"Plataforma médica para gestionar tratamientos y medicamentos, asignarlos mediante QR y consultar reportes de seguimiento.",
+		tech:["Cliente para médicos con React, TypeScript y ShadCN", "Autenticación con Google", "Contribuciones puntuales al backend en Django dentro de un proyecto universitario"],
 		url:"https://front-project-emprendedores.vercel.app/login",
 		repo:"https://github.com/salvadorandre/Front-ProjectEmprendedores",
 		langs:[langs.react, langs.tailwind, langs.google, langs.escolar, langs.github, langs.collab]
@@ -280,32 +286,32 @@ const projects = [
 	,
 	{
 		title:"Gestión educativa (POS)",
-		description:"Aplicación Desktop desarrollada con Python y la librería GUI Tkinter para la gestión de estudiantes, profesores y asignaciones por medio de tablas y formularios nativos. Permite la descarga de repotería para informes de las tablas de estudiantes, profesores y asignaciones. ",
-		tech:["GUI desarrollada con librería Tkinter en Python", "Reportes generados mediantes respuesta API y la librería ReportLab","Proyecto Universitario realizado con fines de aprendizaje."],
+		description:"Aplicación de escritorio para gestionar estudiantes, profesores y asignaciones mediante tablas y formularios.",
+		tech:["Interfaz desarrollada con Python y Tkinter", "Generación de reportes con API y ReportLab", "Proyecto universitario de aprendizaje"],
 		url:"https://github.com/salvadorandre/Repositorio-UI-Daniel",
 		repo:"https://github.com/salvadorandre/Repositorio-UI-Daniel",
 		langs:[langs.py, langs.collab, langs.escolar]
 	},
 	{
 		title:"Administración de citas (CMD)",
-		description:"Aplicación por Consola hecha con C++ y manejada a través de un solo hilo de ejecución. Permite acciones de CRUD (crear, leer, actualizar y eliminar) por medio de archivos de texto (.txt), identificadores y manejo de cadenas de texto. Permite permanencia gracias a los mismo archivos de texto.",
-		tech:["Implementa acciones de base de datos usando como medio archivos de texto", "Proyecto con fines de aprendizaje"],
+		description:"Aplicación de consola en C++ para administrar citas mediante operaciones CRUD y almacenamiento en archivos de texto.",
+		tech:["Persistencia de datos en archivos de texto", "Proyecto desarrollado con fines de aprendizaje"],
 		url:"https://github.com/AllanBit6/Gesti-n-de-citas-TXT",
 		repo:"https://github.com/AllanBit6/Gesti-n-de-citas-TXT",
 		langs:[langs.cpp, langs.escolar]
 	},
 	{
 		title:"Buscaminas (CMD)",
-		description:"Aplicación por Consola hecha con C++ y manejada a través de un solo hilo de ejecución. Permite jugar al conocido juego de Buscaminas por medio de coordenadas y estilizado con una libreria externa (rlutil.h) y permanencia de registros de juego por medio de un archivo de texto.",
-		tech:["Permite el juego y la interaccion mediante coordenadas de posicion para las casillas del tablero", "Permite la permanencia de registros de juego usando archivos de texto (.txt)", "Proyecto con fines de aprendizaje"],
+		description:"Versión de Buscaminas para consola desarrollada en C++, con controles por coordenadas y estilos mediante rlutil.h.",
+		tech:["Interacción mediante coordenadas del tablero", "Historial de partidas guardado en archivos de texto", "Proyecto desarrollado con fines de aprendizaje"],
 		url:"https://github.com/AllanBit6/MinesWeeperCPP",
 		repo:"https://github.com/AllanBit6/MinesWeeperCPP",
 		langs:[langs.cpp, langs.escolar]
 	},
 	{
 		title:"Biblioteca Java (GUI + JPA)",
-		description:"Aplicación desktop creada con Interfaz Gráfica y persistencia de datos con Java Swing y JPA ORM respectivamente. La aplicación consta de módulos de creación de libros, estudiantes y relación de préstamos y devoluciones. ",
-		tech:[1,2,3],
+		description:"Aplicación de escritorio para administrar libros, estudiantes, préstamos y devoluciones.",
+		tech:["Interfaz gráfica desarrollada con Java Swing", "Persistencia de datos mediante JPA", "Gestión de préstamos y devoluciones"],
 		url:"https://github.com/AllanBit6/ProyectoBiblioteca",
 		repo:"https://github.com/AllanBit6/ProyectoBiblioteca",
 		langs:[langs.java, langs.escolar]
