@@ -3,10 +3,10 @@ const { title, repo, url, description, tech, langs } = Astro.props;
 ---
 
 <div
-  class="grid grid-rows-8 items-start border gap-3 border-(--prg-color) rounded-[10px] bg-white/3 p-3"
+  class="flex h-full flex-col gap-4 rounded-[10px] border border-(--prg-color) bg-white/3 p-4"
 >
   <!--Project Header -->
-  <div class="row-span-1 flex flex-row gap-3 items-center align-top">
+  <div class="flex flex-row items-center gap-3">
     <i class="fa-regular fa-folder text-white text-[17px]"></i>
     <h3
       class="text-white md:text-[18px] text-[20px] hover:text-(--primary-color) hover:cursor-pointer"
@@ -20,11 +20,11 @@ const { title, repo, url, description, tech, langs } = Astro.props;
     >
   </div>
   <!--Project description -->
-  <div class="row-span-3">
-    <p class="text-(--prg-color) text-[14px] text-justify">{description}</p>
+  <div>
+    <p class="text-left text-[14px] text-(--prg-color)">{description}</p>
   </div>
   <!--Project skills -->
-  <div class="row-span-3">
+  <div>
     <ul class="ml-5 gap-1 flex flex-col">
       {
         tech.map((t: any) => {
@@ -34,7 +34,7 @@ const { title, repo, url, description, tech, langs } = Astro.props;
     </ul>
   </div>
   <!--Project features -->
-  <div class="row-span-1">
+  <div class="mt-auto pt-3">
     <span class="flex flex-row gap-2 flex-wrap">
       {
         langs.map((l: any) => {
@@ -60,7 +60,16 @@ const { title, repo, url, description, tech, langs } = Astro.props;
                 break;
           }
           return (
-              <i class={classIcon}/>)})
+            <span class = "inline-flex items-center gap-2">
+                <i
+                title={l.title}
+                aria-label={l.title} 
+                class={classIcon}></i>
+              <p class="text-white text-[10px]">{l.title}</p>
+            </span>
+ 
+              )
+              })
       }
     </span>
   </div>
