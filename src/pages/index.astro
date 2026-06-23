@@ -235,64 +235,80 @@ const experiences = [
 
 const projects = [
 	{
-		title:"Sitio web de fundación - Astro Web",
-		description:"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus quae maxime quis ducimus, mollitia non vitae sapiente consequatur illo! Ipsam eveniet iusto delectus numquam illo suscipit tempore nostrum quibusdam voluptates!",
-		tech:["Desarrollo completo del sitio web", "Desplegado en Vercel",3],
+		title:"Sitio web de fundación",
+		description:"Sitio web estático para una fundación educativa creado con Astro y estilizado con Tailwind CSS. Desplegado con un dominio y amigable con motores de busqueda mediante SEO. Cuenta con efectos de scroll fading y efectos visuales con JS.",
+		tech:["Desarrollo completo del sitio web.", "Desplegado en Vercel.","Conexión con Cloudflare para DNS y dominio registrado."],
 		url:"https://www.transformandovidas.org.gt/",
 		repo:"https://github.com/AllanBit6/foundation-webpage",
 		langs:[langs.astro, langs.tailwind, langs.github, langs.cloudflare, langs.cloud]
 	}	
 	,
 	{
-		title:"Sales Net (front) - POS personalizado",
-		description:"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus quae maxime quis ducimus, mollitia non vitae sapiente consequatur illo! Ipsam eveniet iusto delectus numquam illo suscipit tempore nostrum quibusdam voluptates!",
-		tech:["Desarrollo colaborativo de vistas del frontend","Desarrollo de vistas administrativas (usuarios y catálogo)",""],
+		title:"Sales Net (front only)",
+		description:"Aplicación de ventas altamente personalizado para la gestión de ventas, clientes y usuarios de una maquila de productos de indumentaria guatemalteca. Hecho con React, estilizado con Tailwind y desplegado en Netlify y disponible para uso en móvil y desktop de manera interna.",
+		tech:["Desarrollo colaborativo de vistas del frontend","Desarrollo de vistas administrativas (usuarios y catálogo).", "Desplegado como Progressive Web App.", "Backend desarrollado por colaborador externo", "Demas vistas del fron desarrollados por colaborador externo"],
 		url:"https://sales-net.netlify.app/",
 		repo:"https://github.com/SEdwinFBI/sales-net-front",
 		langs:[langs.react, langs.tailwind, langs.mobile,langs.github, langs.collab, langs.cloud, ]
 	},
 	{
-		title:"Boutique POS (front)",
-		description:"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus quae maxime quis ducimus, mollitia non vitae sapiente consequatur illo! Ipsam eveniet iusto delectus numquam illo suscipit tempore nostrum quibusdam voluptates!",
-		tech:[1,2,3],
+		title:"Boutique POS (front only)",
+		description:"Aplicación de ventas basado en un mini-ERP para la gestión de ventas, usuarios, stock y generación de códigos de barras basadas en código del producto para un negocio de venta de ropa. Hecho con React, estilizado con Tailwind y utilizable tanto en desktop como desplegado en Vercel para uso móvil.",
+		tech:["Empaquetado en un contenedor Web de Electron.JS para escritorio","Empaquetado en una Progressive Web App para su uso en móvil.", "Soporte para uso con lector de codigo de barras.", "Backend desarrollado por colaborador externo"],
 		url:"https://front-proyecto-boutique.vercel.app/",
 		repo:"https://github.com/AllanBit6/front-proyecto-boutique",
-		langs:[langs.react, langs.tailwind, langs.mobile,langs.github, langs.cloud]
+		langs:[langs.react, langs.tailwind, langs.mobile, langs.github, langs.collab, langs.cloud]
 	}
 	,
 	{
-		title:"Curriculum 2.0 - Astro Web",
-		description:"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus quae maxime quis ducimus, mollitia non vitae sapiente consequatur illo! Ipsam eveniet iusto delectus numquam illo suscipit tempore nostrum quibusdam voluptates!",
-		tech:[1,2,3],
+		title:"Curriculum 2.0",
+		description:"Sitio web estático para presentación de portafolio personal desarrollado con Astro y estilizado con Tailwind. Implementa tecnologías de traducción según condicionamiento URL. Estilizado con efectos de Scroll fading y parallaxing como efectos visuales. Posee implementación responsive.",
+		tech:["Implementa tecnologia de traducción basado en archivos", "Implementa principios de accesibilidad para mejor posicionamiento web", "Efectos de Scroll Parallaxing hechos sin dependencias externas."],
 		url:"https://curriculum2-0-tau.vercel.app/",
 		repo:"https://github.com/AllanBit6/Curriculum2.0",
 		langs:[langs.astro, langs.tailwind, langs.github, langs.cloud]
 	}
 	,
 	{
-		title:"Clinix - Gestor médico (front)",
-		description:"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus quae maxime quis ducimus, mollitia non vitae sapiente consequatur illo! Ipsam eveniet iusto delectus numquam illo suscipit tempore nostrum quibusdam voluptates!",
-		tech:["Desarrollo completo del cliente de escritorio para médicos.","Interfaz creada con ShadCN y React con TypeScript.","Utiliza autenticación de Google.", "Contribución al backend desarrollado con Django."],
-		url:"#",
-		repo:"#",
-		langs:[langs.react, langs.tailwind, langs.google, langs.escolar, langs.github]
+		title:"Clinix (Front only)",
+		description:"Aplicacion de seguimiento de tratamientos médicos hecho en React y estilizado con Tailwind CSS. Cuenta con autenticación por medio de Google Auth. Permite crear tratamientos, medicamentos y asignarlos via QR a un cliente paciente. El sistema tambien genera reportes de tomas y estadísticas generales.",
+		tech:["Desarrollo completo del cliente de escritorio para médicos.","Interfaz creada con ShadCN y React con TypeScript.","Utiliza autenticación de Google.", "Contribución ocasional al backend desarrollado con Django.", "Backend desarrollado por colaborador externo","Proyecto Universitario realizado con fines de aprendizaje."],
+		url:"https://front-project-emprendedores.vercel.app/login",
+		repo:"https://github.com/salvadorandre/Front-ProjectEmprendedores",
+		langs:[langs.react, langs.tailwind, langs.google, langs.escolar, langs.github, langs.collab]
 	}
 	,
 	{
-		title:"Administración de fechas - Escolar",
-		description:"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus quae maxime quis ducimus, mollitia non vitae sapiente consequatur illo! Ipsam eveniet iusto delectus numquam illo suscipit tempore nostrum quibusdam voluptates!",
-		tech:[1,2,3],
-		url:"#",
-		repo:"#",
+		title:"Gestión educativa (POS)",
+		description:"Aplicación Desktop desarrollada con Python y la librería GUI Tkinter para la gestión de estudiantes, profesores y asignaciones por medio de tablas y formularios nativos. Permite la descarga de repotería para informes de las tablas de estudiantes, profesores y asignaciones. ",
+		tech:["GUI desarrollada con librería Tkinter en Python", "Reportes generados mediantes respuesta API y la librería ReportLab","Proyecto Universitario realizado con fines de aprendizaje."],
+		url:"https://github.com/salvadorandre/Repositorio-UI-Daniel",
+		repo:"https://github.com/salvadorandre/Repositorio-UI-Daniel",
+		langs:[langs.py, langs.collab, langs.escolar]
+	},
+	{
+		title:"Administración de citas (CMD)",
+		description:"Aplicación por Consola hecha con C++ y manejada a través de un solo hilo de ejecución. Permite acciones de CRUD (crear, leer, actualizar y eliminar) por medio de archivos de texto (.txt), identificadores y manejo de cadenas de texto. Permite permanencia gracias a los mismo archivos de texto.",
+		tech:["Implementa acciones de base de datos usando como medio archivos de texto", "Proyecto con fines de aprendizaje"],
+		url:"https://github.com/AllanBit6/Gesti-n-de-citas-TXT",
+		repo:"https://github.com/AllanBit6/Gesti-n-de-citas-TXT",
 		langs:[langs.cpp, langs.escolar]
 	},
 	{
-		title:"Administración escolar - Escolar",
-		description:"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus quae maxime quis ducimus, mollitia non vitae sapiente consequatur illo! Ipsam eveniet iusto delectus numquam illo suscipit tempore nostrum quibusdam voluptates!",
-		tech:[1,2,3],
-		url:"#",
-		repo:"#",
+		title:"Buscaminas (CMD)",
+		description:"Aplicación por Consola hecha con C++ y manejada a través de un solo hilo de ejecución. Permite jugar al conocido juego de Buscaminas por medio de coordenadas y estilizado con una libreria externa (rlutil.h) y permanencia de registros de juego por medio de un archivo de texto.",
+		tech:["Permite el juego y la interaccion mediante coordenadas de posicion para las casillas del tablero", "Permite la permanencia de registros de juego usando archivos de texto (.txt)", "Proyecto con fines de aprendizaje"],
+		url:"https://github.com/AllanBit6/MinesWeeperCPP",
+		repo:"https://github.com/AllanBit6/MinesWeeperCPP",
 		langs:[langs.cpp, langs.escolar]
+	},
+	{
+		title:"Biblioteca Java (GUI + JPA)",
+		description:"Aplicación desktop creada con Interfaz Gráfica y persistencia de datos con Java Swing y JPA ORM respectivamente. La aplicación consta de módulos de creación de libros, estudiantes y relación de préstamos y devoluciones. ",
+		tech:[1,2,3],
+		url:"https://github.com/AllanBit6/ProyectoBiblioteca",
+		repo:"https://github.com/AllanBit6/ProyectoBiblioteca",
+		langs:[langs.java, langs.escolar]
 	}
 ]
 

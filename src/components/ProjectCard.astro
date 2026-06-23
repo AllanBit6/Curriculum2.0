@@ -3,10 +3,10 @@ const { title, repo, url, description, tech, langs } = Astro.props;
 ---
 
 <div
-  class="grid grid-rows-9 items-start border gap-3 border-(--prg-color) rounded-[10px] bg-white/3 p-3"
+  class="grid grid-rows-8 items-start border gap-3 border-(--prg-color) rounded-[10px] bg-white/3 p-3"
 >
   <!--Project Header -->
-  <div class="row-span-2 flex flex-row gap-3 items-center align-top">
+  <div class="row-span-1 flex flex-row gap-3 items-center align-top">
     <i class="fa-regular fa-folder text-white text-[17px]"></i>
     <h3
       class="text-white md:text-[18px] text-[20px] hover:text-(--primary-color) hover:cursor-pointer"
@@ -35,7 +35,7 @@ const { title, repo, url, description, tech, langs } = Astro.props;
   </div>
   <!--Project features -->
   <div class="row-span-1">
-    <ul class="flex flex-row gap-2 flex-wrap">
+    <span class="flex flex-row gap-2 flex-wrap">
       {
         langs.map((l: any) => {
 
@@ -62,6 +62,6 @@ const { title, repo, url, description, tech, langs } = Astro.props;
           return (
               <i class={classIcon}/>)})
       }
-    </ul>
+    </span>
   </div>
 </div>
