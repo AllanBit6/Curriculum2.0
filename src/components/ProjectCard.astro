@@ -39,24 +39,28 @@ const { title, repo, url, description, tech, langs } = Astro.props;
       {
         langs.map((l: any) => {
 
-          let color = "";
+          let classIcon = l.icon;
+
           switch(l.type){
               
               case "collab": 
-                color = "--blue-color"
+                classIcon += " px-3 py-1 rounded-[10px] border border-(--blue-color) bg-(--blue-color)/20 text-(--blue-color) text-[15px]";
                 break;
               case "deploy": 
-                color = "--success-color"
+                classIcon += " px-3 py-1 rounded-[10px] border border-(--success-color) bg-(--success-color)/20 text-(--success-color) text-[15px]";
                 break;
               case "learning": 
-                color = "--yellow-color"
+                classIcon += " px-3 py-1 rounded-[10px] border border-(--yellow-color) bg-(--yellow-color)/20 text-(--yellow-color) text-[15px]";
                 break;
               case "lang": 
-                color = "--primary-color"
+                classIcon += " px-3 py-1 rounded-[10px] border border-(--primary-color) bg-(--primary-color)/20 text-(--primary-color) text-[15px]";
+                break;
+              default:
+                classIcon = "--prg-color"
                 break;
           }
           return (
-              <i class={l.icon+" px-3 py-1 rounded-[10px] border border-() bg-("+color+")/20 text-("+ color+") text-[15px]"}/>)})
+              <i class={classIcon}/>)})
       }
     </ul>
   </div>
